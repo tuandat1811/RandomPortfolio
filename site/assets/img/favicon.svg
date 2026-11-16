@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#b5482a"/><text x="32" y="44" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#fff">P</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Băng cassette: cùng kiểu với thẻ bài tập trên trang Dự án -->
+  <rect x="3" y="11" width="58" height="42" rx="8" fill="#f4a582"/>
+  <rect x="3" y="11" width="58" height="42" rx="8" fill="none" stroke="#2e2541" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="9" y="16" width="46" height="13" rx="3" fill="#fffaf0"/>
+  <rect x="9" y="16" width="46" height="4" rx="2" fill="#7f72c2"/>
+  <rect x="15" y="33" width="34" height="13" rx="6.5" fill="#2e2541"/>
+  <circle cx="23" cy="39.5" r="4.5" fill="#fffaf0"/>
+  <circle cx="41" cy="39.5" r="4.5" fill="#fffaf0"/>
+  <circle cx="23" cy="39.5" r="1.6" fill="#2e2541"/>
+  <circle cx="41" cy="39.5" r="1.6" fill="#2e2541"/>
+  <path d="M17 53 L20 47 H44 L47 53 Z" fill="#2e2541" opacity=".22"/>
+</svg>
