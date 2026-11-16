@@ -9,7 +9,7 @@ window.SITE_DATA = {
     "courseCode": "INF2501",
     "tagline": "",
     "intro": "",
-    "avatar": "assets/img/avatar.svg",
+    "avatar": "assets/img/avatar.jpg",
     "introVideo": "assets/video/gioi-thieu.mp4",
     "hobbies": [
       "Nghe nhạc",

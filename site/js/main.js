@@ -494,8 +494,14 @@
       return "<div><dt>" + r[0] + "</dt><dd>" + esc(r[1]) + "</dd></div>";
     }).join("");
     var infoCard = '<div class="card info-card taped">' +
-      '<dl class="info-list">' + info + "</dl>" +
-      (empty(P.hobbies) ? "" : '<div class="info-hobbies"><span class="info-label">Sở thích</span>' + list(P.hobbies, "", "tags") + "</div>") +
+      (empty(P.avatar) ? "" :
+        '<div class="avatar-wrap">' +
+          '<img class="avatar" src="' + esc(P.avatar) + '" alt="Ảnh đại diện của ' + esc(P.name || "tác giả") + '">' +
+        "</div>") +
+      '<div class="info-body">' +
+        '<dl class="info-list">' + info + "</dl>" +
+        (empty(P.hobbies) ? "" : '<div class="info-hobbies"><span class="info-label">Sở thích</span>' + list(P.hobbies, "", "tags") + "</div>") +
+      "</div>" +
     "</div>";
 
     el.innerHTML =
