@@ -496,9 +496,10 @@
         "</div>" +
       "</section>" +
 
-      '<section class="section"><h2>Mục tiêu học tập</h2>' + list(P.learningGoals, "mục tiêu học tập") + "</section>" +
-      '<section class="section"><h2>Định hướng phát triển cá nhân</h2>' + orient + "</section>" +
-      '<section class="section"><h2>Mục tiêu của Portfolio</h2>' + goals + "</section>";
+      // Tạm ẩn: 3 mục dưới chỉ hiện khi đã có nội dung (điền trong trang admin là tự hiện lại)
+      (empty(P.learningGoals) ? "" : '<section class="section"><h2>Mục tiêu học tập</h2>' + list(P.learningGoals, "mục tiêu học tập") + "</section>") +
+      (empty(P.orientation) ? "" : '<section class="section"><h2>Định hướng phát triển cá nhân</h2>' + orient + "</section>") +
+      (empty(P.portfolioGoals) ? "" : '<section class="section"><h2>Mục tiêu của Portfolio</h2>' + goals + "</section>");
 
     initReveal();
   }
