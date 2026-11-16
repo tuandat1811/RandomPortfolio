@@ -2,7 +2,7 @@ window.SITE_DATA = {
   "profile": {
     "name": "Trần Thị Khánh Linh",
     "studentId": "2552210083",
-    "className": "K20B – SPAN",
+    "className": "K20B",
     "major": "Sư phạm Âm nhạc",
     "school": "Trường Đại học Sư phạm Nghệ thuật Trung ương",
     "course": "Nhập môn Công nghệ số và ứng dụng trí tuệ nhân tạo",
@@ -11,10 +11,31 @@ window.SITE_DATA = {
     "intro": "",
     "avatar": "assets/img/avatar.svg",
     "introVideo": "assets/video/gioi-thieu.mp4",
-    "hobbies": [],
-    "learningGoals": [],
+    "hobbies": [
+      "Nghe nhạc",
+      "Hát",
+      "Tìm hiểu các công cụ mới"
+    ],
+    "learningGoals": [
+      "Nắm vững kiến thức chuyên môn âm nhạc và nghiệp vụ sư phạm để trở thành cô giáo dạy âm nhạc.",
+      "Rèn luyện kỹ năng thanh nhạc, biểu diễn và tổ chức hoạt động âm nhạc cho học sinh.",
+      "Ứng dụng công nghệ số và AI vào việc soạn bài, thiết kế bài giảng và truyền cảm hứng âm nhạc cho học sinh."
+    ],
     "orientation": [],
-    "portfolioGoals": []
+    "portfolioGoals": [
+      {
+        "title": "Thể hiện các kỹ năng số đã học trong quá trình học tập.",
+        "desc": ""
+      },
+      {
+        "title": "Lưu trữ các sản phẩm cá nhân để dễ truy cập, quản lý và chia sẻ.",
+        "desc": ""
+      },
+      {
+        "title": "Là nền tảng để theo dõi sự tiến bộ và phát triển năng lực của bản thân.",
+        "desc": ""
+      }
+    ]
   },
   "exercises": [
     {

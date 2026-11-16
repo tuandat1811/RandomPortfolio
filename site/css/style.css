@@ -543,6 +543,31 @@ video.video-frame { aspect-ratio: auto; height: auto; max-height: 80vh; margin: 
 .hero-video .video-card { width: fit-content; max-width: 100%; margin: 0 auto; }
 @media (max-width: 600px) { .video-card { padding: 8px; border-radius: 20px; } .video-card .video-frame { border-radius: 14px; } }
 
+/* Thông tin cá nhân (trang Giới thiệu) */
+.info-card { display: grid; gap: 20px 40px; grid-template-columns: 1fr; padding: 28px; }
+@media (min-width: 760px) { .info-card { grid-template-columns: 1.4fr 1fr; align-items: start; } }
+.info-list { margin: 0; display: grid; gap: 0; }
+.info-list div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.info-list div:last-child { border-bottom: 0; }
+.info-list dt { font-weight: 800; }
+.info-list dd { margin: 0; color: var(--muted); }
+.info-label { display: block; font-family: var(--hand); font-size: 1.2rem; color: var(--accent-2); margin-bottom: 10px; }
+.info-hobbies .tags { margin: 0; }
+@media (max-width: 480px) { .info-list div { grid-template-columns: 1fr; gap: 0; } .info-card { padding: 22px 18px; } }
+
+/* Mục tiêu học tập: danh sách có dấu nốt nhạc */
+.goal-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.goal-list li {
+  margin: 0; position: relative; padding: 16px 20px 16px 58px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow);
+}
+.goal-list li::before {
+  content: "♪"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent); font-weight: 800;
+}
+.goal-list li:nth-child(2n)::before { background: var(--accent-2-soft); color: var(--accent-2); content: "♫"; }
+
 /* Khối tab ảnh (Bài 3) */
 .tab-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); cursor: zoom-in; background: var(--surface-2); }
 

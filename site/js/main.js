@@ -481,10 +481,22 @@
       '<ol class="timeline">' + P.orientation.map(function (o) {
         return "<li><strong>" + esc(o.title) + "</strong><span>" + linkify(esc(o.desc || "")) + "</span></li>";
       }).join("") + "</ol>";
+    // Mục tiêu của Portfolio: các tờ giấy note đánh số 01, 02, 03
     var goals = empty(P.portfolioGoals) ? "<p>" + ph("mục tiêu của Portfolio") + "</p>" :
-      '<div class="grid grid-3">' + P.portfolioGoals.map(function (g) {
-        return '<div class="card"><h3>' + esc(g.title) + '</h3><p class="muted" style="margin:0">' + linkify(esc(g.desc || "")) + "</p></div>";
+      '<div class="grid grid-3 principles">' + P.portfolioGoals.map(function (g) {
+        return '<div class="card principle"><h3>' + esc(g.title) + "</h3>" + (g.desc ? "<p>" + linkify(esc(g.desc)) + "</p>" : "") + "</div>";
       }).join("") + "</div>";
+    // Thông tin cá nhân: thẻ sinh viên
+    var info = [
+      ["Họ và tên", P.name], ["Lớp", P.className], ["MSSV", P.studentId],
+      ["Ngành học", P.major], ["Trường", P.school]
+    ].filter(function (r) { return !empty(r[1]); }).map(function (r) {
+      return "<div><dt>" + r[0] + "</dt><dd>" + esc(r[1]) + "</dd></div>";
+    }).join("");
+    var infoCard = '<div class="card info-card taped">' +
+      '<dl class="info-list">' + info + "</dl>" +
+      (empty(P.hobbies) ? "" : '<div class="info-hobbies"><span class="info-label">Sở thích</span>' + list(P.hobbies, "", "tags") + "</div>") +
+    "</div>";
 
     el.innerHTML =
       '<div class="scene">' + sceneSVG() + "</div>" +
@@ -496,8 +508,9 @@
         "</div>" +
       "</section>" +
 
-      // Tạm ẩn: 3 mục dưới chỉ hiện khi đã có nội dung (điền trong trang admin là tự hiện lại)
-      (empty(P.learningGoals) ? "" : '<section class="section"><h2>Mục tiêu học tập</h2>' + list(P.learningGoals, "mục tiêu học tập") + "</section>") +
+      (empty(P.name) ? "" : '<section class="section"><h2>Thông tin cá nhân</h2>' + infoCard + "</section>") +
+      // Các mục dưới chỉ hiện khi đã có nội dung (điền trong trang admin là tự hiện)
+      (empty(P.learningGoals) ? "" : '<section class="section"><h2>Mục tiêu học tập và định hướng phát triển</h2>' + list(P.learningGoals, "", "goal-list") + "</section>") +
       (empty(P.orientation) ? "" : '<section class="section"><h2>Định hướng phát triển cá nhân</h2>' + orient + "</section>") +
       (empty(P.portfolioGoals) ? "" : '<section class="section"><h2>Mục tiêu của Portfolio</h2>' + goals + "</section>");
 

@@ -336,9 +336,9 @@
         text(p, "introVideo", "Video giới thiệu bản thân (không bắt buộc, có thể lấy điểm thưởng)", "Link YouTube hoặc Google Drive.", "url")
       ]),
       h("fieldset", null, [h("legend", { text: "Mục tiêu và định hướng" }),
-        lines(p, "learningGoals", "Mục tiêu học tập"),
+        lines(p, "learningGoals", "Mục tiêu học tập và định hướng phát triển"),
         pipes(p, "orientation", ["title", "desc"], "Định hướng phát triển cá nhân", "Dạng: Năm 1 – 2 | Nắm vững kiến thức nền tảng…"),
-        pipes(p, "portfolioGoals", ["title", "desc"], "Mục tiêu của Portfolio", "Dạng: Lưu trữ sản phẩm | Tập hợp bài tập để dễ truy cập và chia sẻ.")
+        pipes(p, "portfolioGoals", ["title", "desc"], "Mục tiêu của Portfolio", "Mỗi dòng một mục tiêu. Có thể thêm mô tả sau dấu |.")
       ])
     ];
   }
