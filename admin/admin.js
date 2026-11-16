@@ -244,7 +244,7 @@
 
   var BLOCK_LABEL = {
     table: "Bảng", list: "Danh sách", text: "Đoạn văn", tree: "Cây thư mục",
-    timeline: "Dòng thời gian", principles: "Thẻ nguyên tắc", compare: "So sánh Prompt"
+    timeline: "Dòng thời gian", principles: "Thẻ nguyên tắc", compare: "So sánh Prompt", tabs: "Tab ảnh"
   };
   function newBlock(t) {
     switch (t) {
@@ -281,6 +281,20 @@
           break;
         case "principles":
           item.appendChild(pipes(b, "items", ["title", "desc"], "Các nguyên tắc", "Dạng: Minh bạch | Luôn ghi rõ phần nào có AI hỗ trợ."));
+          break;
+        case "tabs":
+          b.items = b.items || [];
+          b.items.forEach(function (it, k) {
+            var sub = h("div", { class: "item", style: "background:var(--surface)" }, [h("div", { class: "item-head" }, [h("span", { text: "Tab " + (k + 1) }), moveBtns(b.items, k)])]);
+            sub.appendChild(text(it, "label", "Tên tab", "Ví dụ: T1-A (cơ bản)"));
+            sub.appendChild(imagePick(it, "image", "Ảnh", "bai" + ex.number));
+            sub.appendChild(text(it, "caption", "Chú thích ảnh"));
+            sub.appendChild(area(it, "text", "Ghi chú thêm (không bắt buộc)", "", 3));
+            item.appendChild(sub);
+          });
+          item.appendChild(h("button", { class: "small-btn", type: "button", text: "+ Thêm tab", onclick: function () {
+            b.items.push({ label: "", image: "", caption: "", text: "" }); touch(); render();
+          } }));
           break;
         case "compare":
           b.items = b.items || [];

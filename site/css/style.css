@@ -531,6 +531,21 @@ figure { margin: 0; }
 .np-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent-2), var(--accent)); }
 .np-meta { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; color: var(--muted); }
 
+/* Video giới thiệu ở đầu trang Giới thiệu */
+.hero.hero-video { display: block; }
+.video-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
+  box-shadow: var(--shadow); padding: 14px;
+}
+.video-card .video-frame { border: 0; border-radius: 18px; background: #0f0c1d; }
+/* Video tự lưu trên site (thẻ <video>) giữ đúng tỉ lệ gốc, kể cả video dọc */
+video.video-frame { aspect-ratio: auto; height: auto; max-height: 80vh; margin: 0 auto; }
+.hero-video .video-card { width: fit-content; max-width: 100%; margin: 0 auto; }
+@media (max-width: 600px) { .video-card { padding: 8px; border-radius: 20px; } .video-card .video-frame { border-radius: 14px; } }
+
+/* Khối tab ảnh (Bài 3) */
+.tab-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); cursor: zoom-in; background: var(--surface-2); }
+
 /* Cột sóng nhạc */
 .eq { display: inline-flex; align-items: flex-end; gap: 3px; height: 16px; }
 .eq i { width: 4px; height: 100%; border-radius: 2px; background: var(--accent); transform-origin: bottom; animation: eq 1.1s ease-in-out infinite; }

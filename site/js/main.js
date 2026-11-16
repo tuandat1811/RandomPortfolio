@@ -259,8 +259,27 @@
         html = empty(b.items) ? "<p>" + ph("các cặp Prompt so sánh") + "</p>" :
           b.items.map(function (it, k) { return renderCompare(it, idx + "-" + k); }).join("");
         break;
+      case "tabs":
+        html = empty(b.items) ? "<p>" + ph("các ảnh trong khối tab") + "</p>" : renderImageTabs(b.items, "tabs-" + idx);
+        break;
     }
     return '<div class="media-block">' + t + html + "</div>";
+  }
+
+  /* Khối tab ảnh: mỗi tab là một ảnh (vd. kết quả của từng mức prompt), bấm để chuyển */
+  function renderImageTabs(items, id) {
+    var tabs = items.map(function (it, k) {
+      return '<button type="button" role="tab" aria-selected="' + (k === 0) + '" aria-controls="' + id + "-" + k + '">' + esc(it.label || "Tab " + (k + 1)) + "</button>";
+    }).join("");
+    var panels = items.map(function (it, k) {
+      figNo++;
+      var cap = "Hình " + figNo + ". " + (it.caption || it.label || "");
+      return '<div class="compare-panel" role="tabpanel" id="' + id + "-" + k + '"' + (k ? " hidden" : "") + ">" +
+        (it.image ? '<figure class="tab-figure"><img src="' + esc(it.image) + '" alt="' + esc(it.caption || it.label || "") + '" loading="lazy" data-lightbox data-caption="' + esc(cap) + '"><figcaption>' + esc(cap) + "</figcaption></figure>" : "") +
+        (it.text ? paras(it.text, "") : "") +
+      "</div>";
+    }).join("");
+    return '<div class="compare" data-compare><div class="compare-tabs" role="tablist">' + tabs + "</div>" + panels + "</div>";
   }
 
   function renderCompare(it, key) {
@@ -469,41 +488,19 @@
 
     el.innerHTML =
       '<div class="scene">' + sceneSVG() + "</div>" +
-      '<section class="hero">' +
-        '<div class="avatar-wrap">' +
-          '<img class="avatar" id="avatar" src="' + esc(P.avatar || "assets/img/avatar.svg") + '" alt="Ảnh đại diện của ' + esc(P.name || "tác giả") + '">' +
-          '<button class="avatar-toggle" id="avatar-toggle" type="button">◐ Xem ảnh đen trắng</button>' +
-        "</div>" +
-        '<div class="hero-info">' +
-          '<span class="eyebrow">Giới thiệu</span>' +
-          "<h1>" + (P.name ? "Xin chào, mình là " + esc(P.name) : ph("Họ và tên")) + "</h1>" +
-          '<p class="lead">' + inline(P.tagline, "một câu giới thiệu ngắn") + "</p>" +
-          '<dl class="meta-list">' +
-            "<div><dt>Ngành học</dt><dd>" + inline(P.major, "ngành học") + "</dd></div>" +
-            "<div><dt>Trường</dt><dd>" + esc(P.school) + "</dd></div>" +
-          "</dl>" +
-          '<a class="btn" href="projects.html">Xem các dự án →</a>' +
+      // Video giới thiệu bản thân thay cho khối tên tuổi và phần "Về bản thân"
+      '<section class="hero hero-video" aria-label="Video giới thiệu bản thân">' +
+        '<div class="video-card taped">' +
+          (empty(P.introVideo) ? "<p>" + ph("video giới thiệu bản thân") + "</p>"
+            : embedVideo(P.introVideo, "Video giới thiệu bản thân" + (P.name ? " của " + P.name : ""))) +
         "</div>" +
       "</section>" +
-
-      '<section class="section"><h2>Về bản thân</h2>' + paras(P.intro, "đoạn giới thiệu bản thân") +
-        "<h3>Sở thích</h3>" + list(P.hobbies, "sở thích", "tags") + "</section>" +
-
-      (empty(P.introVideo) ? "" :
-        '<section class="section"><h2>Video giới thiệu</h2>' + embedVideo(P.introVideo, "Video giới thiệu bản thân") + "</section>") +
 
       '<section class="section"><h2>Mục tiêu học tập</h2>' + list(P.learningGoals, "mục tiêu học tập") + "</section>" +
       '<section class="section"><h2>Định hướng phát triển cá nhân</h2>' + orient + "</section>" +
       '<section class="section"><h2>Mục tiêu của Portfolio</h2>' + goals + "</section>";
 
     initReveal();
-
-    var av = document.getElementById("avatar");
-    var at = document.getElementById("avatar-toggle");
-    at.addEventListener("click", function () {
-      var bw = av.classList.toggle("bw");
-      at.textContent = bw ? "◑ Xem ảnh màu" : "◐ Xem ảnh đen trắng";
-    });
   }
 
   /* ---------- Trang Dự án ---------- */
