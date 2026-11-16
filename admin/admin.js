@@ -211,9 +211,7 @@
       var item = h("div", { class: "item" }, [h("div", { class: "item-head" }, [h("span", { text: (i + 1) + ". " + MEDIA_LABEL[m.type] }), moveBtns(ex.media, i)])]);
       if (m.type === "image") {
         item.appendChild(imagePick(m, "src", "Ảnh", "bai" + ex.number));
-        item.appendChild(text(m, "caption", "Chú thích", "Hiển thị dưới dạng “Hình X. …”"));
-        item.appendChild(text(m, "credit", "Nguồn (nếu là ảnh của người khác hoặc do AI tạo)", "Ví dụ: Tạo bằng Canva AI / Ảnh chụp màn hình của tác giả"));
-      } else {
+        item.appendChild(text(m, "caption", "Chú thích", "Hiển thị dưới dạng “Hình X. …”"));      } else {
         var hint = m.type === "video" ? "Link YouTube hoặc Google Drive (đã bật “Bất kỳ ai có đường liên kết”)."
           : m.type === "pdf" ? "Link Google Drive / Google Docs / Slides đã chia sẻ công khai."
           : "Đường dẫn bất kỳ, ví dụ Trello, Notion, Canva.";
@@ -229,14 +227,14 @@
     drop.addEventListener("drop", function (e) {
       e.preventDefault(); drop.classList.remove("over");
       Array.prototype.forEach.call(e.dataTransfer.files, function (f) {
-        if (/^image\//.test(f.type)) ex.media.push({ type: "image", src: addFile(f, "bai" + ex.number), caption: f.name.replace(/\.[^.]+$/, ""), credit: "" });
+        if (/^image\//.test(f.type)) ex.media.push({ type: "image", src: addFile(f, "bai" + ex.number), caption: f.name.replace(/\.[^.]+$/, "") });
       });
       touch(); render();
     });
     box.appendChild(drop);
     box.appendChild(h("div", { class: "add-row", style: "margin-top:12px" }, Object.keys(MEDIA_LABEL).map(function (t) {
       return h("button", { class: "small-btn", type: "button", text: "+ " + MEDIA_LABEL[t], onclick: function () {
-        ex.media.push(t === "image" ? { type: t, src: "", caption: "", credit: "" } : { type: t, url: "", caption: "" }); touch(); render();
+        ex.media.push(t === "image" ? { type: t, src: "", caption: "" } : { type: t, url: "", caption: "" }); touch(); render();
       } });
     })));
     return box;

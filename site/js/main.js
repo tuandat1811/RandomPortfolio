@@ -309,7 +309,7 @@
       if (!imgs.length) return;
       out += '<div class="media-block gallery">' + imgs.map(function (m) {
         figNo++;
-        var cap = "Hình " + figNo + ". " + (m.caption || "") + (m.credit ? " (Nguồn: " + m.credit + ")" : "");
+        var cap = "Hình " + figNo + ". " + (m.caption || "");
         return '<figure><img src="' + esc(m.src) + '" alt="' + esc(m.caption || "Hình minh họa") + '" loading="lazy" data-lightbox data-caption="' + esc(cap) + '"><figcaption>' + linkify(esc(cap)) + "</figcaption></figure>";
       }).join("") + "</div>";
       imgs = [];

@@ -68,122 +68,102 @@ window.SITE_DATA = {
         {
           "type": "image",
           "src": "assets/uploads/bai1-01.png",
-          "caption": "Bước 1 – Mở File Explorer",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 1 – Mở File Explorer"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-02.png",
-          "caption": "Bước 2 – Truy cập ổ đĩa / thư mục",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 2 – Truy cập ổ đĩa / thư mục"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-03.png",
-          "caption": "Bước 3 – Tạo thư mục mới (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 3 – Tạo thư mục mới (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-04.png",
-          "caption": "Bước 3 – Tạo thư mục mới (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 3 – Tạo thư mục mới (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-05.png",
-          "caption": "Bước 4 – Vào thư mục vừa tạo",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 4 – Vào thư mục vừa tạo"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-06.png",
-          "caption": "Bước 5 – Tạo tệp tin văn bản (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 5 – Tạo tệp tin văn bản (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-07.png",
-          "caption": "Bước 5 – Tạo tệp tin văn bản (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 5 – Tạo tệp tin văn bản (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-08.png",
-          "caption": "Bước 6 – Đổi tên tệp tin (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 6 – Đổi tên tệp tin (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-09.png",
-          "caption": "Bước 6 – Đổi tên tệp tin (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 6 – Đổi tên tệp tin (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-10.png",
-          "caption": "Bước 7 – Tạo thư mục con",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 7 – Tạo thư mục con"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-11.png",
-          "caption": "Bước 8 – Sao chép tệp tin (Copy & Paste) (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 8 – Sao chép tệp tin (Copy & Paste) (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-12.png",
-          "caption": "Bước 8 – Sao chép tệp tin (Copy & Paste) (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 8 – Sao chép tệp tin (Copy & Paste) (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-13.png",
-          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (1/3)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (1/3)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-14.png",
-          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (2/3)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (2/3)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-15.png",
-          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (3/3)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 9 – Di chuyển tệp tin (Cut & Paste) (3/3)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-16.png",
-          "caption": "Bước 10 – Xoá tệp tin (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 10 – Xoá tệp tin (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-17.png",
-          "caption": "Bước 10 – Xoá tệp tin (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 10 – Xoá tệp tin (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-18.png",
-          "caption": "Bước 11 – Xoá vĩnh viễn",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 11 – Xoá vĩnh viễn"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-19.png",
-          "caption": "Bước 12 – Khôi phục từ Thùng rác (tuỳ chọn) (1/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 12 – Khôi phục từ Thùng rác (tuỳ chọn) (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai1-20.png",
-          "caption": "Bước 12 – Khôi phục từ Thùng rác (tuỳ chọn) (2/2)",
-          "credit": "Ảnh chụp màn hình của tác giả"
+          "caption": "Bước 12 – Khôi phục từ Thùng rác (tuỳ chọn) (2/2)"
         }
       ]
     },
@@ -394,62 +374,52 @@ window.SITE_DATA = {
         {
           "type": "image",
           "src": "assets/uploads/bai2-01.png",
-          "caption": "Hallam (2010) – International Journal of Music Education",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Hallam (2010) – International Journal of Music Education"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-02.png",
-          "caption": "Welch và cộng sự (2014) – Frontiers in Psychology (1/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Welch và cộng sự (2014) – Frontiers in Psychology (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-03.png",
-          "caption": "Welch và cộng sự (2014) – Frontiers in Psychology (2/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Welch và cộng sự (2014) – Frontiers in Psychology (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-04.png",
-          "caption": "Clift và Hancox (2001)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Clift và Hancox (2001)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-05.png",
-          "caption": "Clift và Hancox (2010)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Clift và Hancox (2010)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-06.png",
-          "caption": "Trần Thị Nhật Ánh (2025) (1/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Trần Thị Nhật Ánh (2025) (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-07.png",
-          "caption": "Trần Thị Nhật Ánh (2025) (2/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Trần Thị Nhật Ánh (2025) (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-08.png",
-          "caption": "Trần Tâm Đan (2011) (1/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Trần Tâm Đan (2011) (1/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-09.png",
-          "caption": "Trần Tâm Đan (2011) (2/2)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Trần Tâm Đan (2011) (2/2)"
         },
         {
           "type": "image",
           "src": "assets/uploads/bai2-10.png",
-          "caption": "Nguyễn Bách (2010)",
-          "credit": "Ảnh chụp màn hình trang tài liệu"
+          "caption": "Nguyễn Bách (2010)"
         }
       ]
     },
@@ -1154,8 +1124,7 @@ window.SITE_DATA = {
         {
           "type": "image",
           "src": "assets/uploads/bai6-infographic.png",
-          "caption": "Infographic “Sử dụng AI có trách nhiệm trong học thuật”",
-          "credit": "Thiết kế của tác giả"
+          "caption": "Infographic “Sử dụng AI có trách nhiệm trong học thuật”"
         }
       ]
     }
