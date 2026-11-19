@@ -574,10 +574,13 @@
     if (!e) { el.innerHTML = "<h1>Không tìm thấy bài tập</h1>"; return; }
     document.title = exLabel(e) + " | " + (P.name || "Portfolio");
 
-    var diff = empty(e.difficulties) ? "<p>" + ph("khó khăn gặp phải và cách giải quyết") + "</p>" :
-      renderTable(["Khó khăn", "Cách giải quyết"], e.difficulties.map(function (d) { return [d.problem, d.solution]; }));
+    var diff = !empty(e.difficulties)
+      ? renderTable(["Khó khăn", "Cách giải quyết"], e.difficulties.map(function (d) { return [d.problem, d.solution]; }))
+      : "<p>" + (empty(e.difficultiesNote) ? ph("khó khăn gặp phải và cách giải quyết") : esc(e.difficultiesNote)) + "</p>";
     var ai = empty(e.aiUsage)
-      ? "<p style=\"margin:0\">Không sử dụng công cụ AI trong bài tập này. " + ph("sửa nếu có dùng AI") + "</p>"
+      ? "<p style=\"margin:0\">" + (empty(e.aiNote)
+          ? "Không sử dụng công cụ AI trong bài tập này. " + ph("sửa nếu có dùng AI")
+          : esc(e.aiNote)) + "</p>"
       : '<ul style="margin:0">' + e.aiUsage.map(function (a) {
           return "<li><strong>" + esc(a.tool) + ":</strong> " + linkify(esc(a.purpose)) + "</li>";
         }).join("") + "</ul>";

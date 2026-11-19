@@ -72,7 +72,7 @@ window.SITE_DATA = {
         {
           "type": "tree",
           "title": "Cấu trúc thư mục đã thiết lập",
-          "text": "💻 This PC\n└── 💽 New Volume (D:)\n    └── 📁 ThucHanh_TranThiKhanhLinh      (Bước 3: thư mục chính)\n        ├── 📁 TaiLieu                    (Bước 7: thư mục con)\n        │   └── 📄 GhiChuQuanTrong.txt    (Bước 8: bản sao · Bước 10–12: xoá rồi khôi phục)\n        └── 📄 GhiChuQuanTrong.txt        (Bước 5–6: tệp gốc, đổi tên)\n\nTệp tạm DiChuyen.txt: tạo trong thư mục chính → Cut & Paste vào TaiLieu (Bước 9)\n→ xoá vĩnh viễn bằng Shift + Delete (Bước 11), nên không còn trong cây."
+          "text": "💻 This PC\n└── 💽 New Volume (D:)\n    └── 📁 ThucHanh_TranThiKhanhLinh      (Bước 3: thư mục chính)\n        ├── 📁 TaiLieu                    (Bước 7: thư mục con)\n        │   └── 📄 GhiChuQuanTrong.txt    (Bước 8: bản sao · Bước 10–12: xoá rồi khôi phục)\n        └── 📄 GhiChuQuanTrong.txt        (Bước 5–6: tệp gốc, đổi tên)\n\nTệp tạm DiChuyen.txt: tạo trong thư mục chính → Cut & Paste vào TaiLieu (Bước 9)\n→ xoá vĩnh viễn bằng Shift + Delete (Bước 11)."
         },
         {
           "type": "table",
@@ -82,7 +82,28 @@ window.SITE_DATA = {
             "Ví dụ đúng",
             "Ví dụ sai"
           ],
-          "rows": []
+          "rows": [
+            [
+              "Viết tiếng Việt không dấu",
+              "GhiChuQuanTrong.txt",
+              "GhiChúQuanTrọng.txt"
+            ],
+            [
+              "Không dùng khoảng trắng, viết hoa chữ cái đầu mỗi từ (PascalCase)",
+              "TaiLieu",
+              "tai lieu"
+            ],
+            [
+              "Dùng dấu gạch dưới ( _ ) để ngăn cách các phần trong tên: nội dung _ họ tên",
+              "ThucHanh_TranThiKhanhLinh",
+              "Thực hành Trần Thị Khánh Linh"
+            ],
+            [
+              "Tên ngắn gọn, nói rõ nội dung hoặc mục đích của tệp/thư mục",
+              "DiChuyen.txt",
+              "New Text Document.txt"
+            ]
+          ]
         }
       ],
       "media": [
@@ -186,7 +207,9 @@ window.SITE_DATA = {
           "src": "assets/uploads/bai1-20.png",
           "caption": "Bước 12 – Khôi phục từ Thùng rác (tuỳ chọn) (2/2)"
         }
-      ]
+      ],
+      "difficultiesNote": "Không có khó khăn trong việc làm bài tập này.",
+      "aiNote": "Không sử dụng công cụ AI nào."
     },
     {
       "number": 2,

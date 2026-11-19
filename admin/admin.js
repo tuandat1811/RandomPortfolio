@@ -359,7 +359,9 @@
       h("fieldset", null, [h("legend", { text: "b) Tóm tắt quá trình thực hiện" }),
         lines(ex, "steps", "Các bước thực hiện", "Ghi rõ công cụ đã dùng ở mỗi bước."),
         pipes(ex, "difficulties", ["problem", "solution"], "Khó khăn và cách giải quyết", "Dạng: Khó khăn | Cách giải quyết."),
-        pipes(ex, "aiUsage", ["tool", "purpose"], "Công cụ AI đã sử dụng", "Dạng: ChatGPT | Gợi ý dàn ý cho phần mô tả. Để trống nếu không dùng AI.")
+        text(ex, "difficultiesNote", "Ghi chú khi không có khó khăn", "Hiện thay cho bảng khi bảng trên để trống, ví dụ: Không có khó khăn trong việc làm bài tập này."),
+        pipes(ex, "aiUsage", ["tool", "purpose"], "Công cụ AI đã sử dụng", "Dạng: ChatGPT | Gợi ý dàn ý cho phần mô tả. Để trống nếu không dùng AI."),
+        text(ex, "aiNote", "Ghi chú khi không dùng AI", "Hiện thay cho danh sách khi danh sách trên để trống, ví dụ: Không sử dụng công cụ AI nào.")
       ]),
       blockEditor(ex),
       mediaEditor(ex)
