@@ -1023,7 +1023,20 @@ window.SITE_DATA = {
         "Phân tích các vấn đề đạo đức: ranh giới gian lận, sở hữu trí tuệ, tác động đến kỹ năng, độ tin cậy và quyền riêng tư.",
         "Xây dựng bộ 5 nguyên tắc cá nhân và thiết kế infographic “Sử dụng AI có trách nhiệm”."
       ],
-      "difficulties": [],
+      "difficulties": [
+        {
+          "problem": "Chính sách AI của các trường nằm rải rác trong nhiều văn bản, hướng dẫn và bài báo khác nhau, khó tổng hợp.",
+          "solution": "Chỉ chọn 3 trường có định hướng rõ ràng, đọc từ trang chính thức của trường và lập bảng so sánh các điểm chung."
+        },
+        {
+          "problem": "Đầu ra của ChatGPT còn chung chung, có ý thiếu số liệu hoặc nguồn kiểm chứng.",
+          "solution": "Đối chiếu từng ý với tài liệu đáng tin cậy, lọc bỏ ý không kiểm chứng được và bổ sung ví dụ thực tế trước khi đưa vào dàn ý."
+        },
+        {
+          "problem": "Khó phân định ranh giới giữa hỗ trợ hợp lý và gian lận học thuật khi dùng AI.",
+          "solution": "Tự đặt câu hỏi kiểm tra: mình có hiểu và giải thích lại được nội dung không, đã ghi nhận phần hỗ trợ của AI chưa."
+        }
+      ],
       "aiUsage": [
         {
           "tool": "ChatGPT",
