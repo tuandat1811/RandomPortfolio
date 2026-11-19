@@ -1151,11 +1151,31 @@ window.SITE_DATA = {
     }
   ],
   "conclusion": {
-    "experience": "",
-    "keyLearnings": [],
-    "highlight": "",
-    "challenges": [],
-    "aiTools": [],
-    "closing": ""
+    "experience": "Trước khi làm Portfolio, mình nghĩ việc xây dựng một trang web là chuyện của dân công nghệ, rất xa với một sinh viên Sư phạm Âm nhạc. Nhưng khi dùng Claude để lên cấu trúc, viết nội dung và tạo mã nguồn, rồi đưa trang lên mạng bằng Vercel, mình nhận ra chỉ cần biết mô tả rõ mình muốn gì là đã có thể làm ra một sản phẩm thật.\n\nĐiều làm mình thấy vui nhất là khi trang web có đường link riêng và ai cũng mở được. Quá trình này cũng giúp mình nhìn lại việc học của bản thân: từ những bài tập đầu còn lúng túng đến lúc tự sắp xếp và trình bày được sản phẩm của mình.",
+    "keyLearnings": [
+      {
+        "title": "Dùng AI có trách nhiệm",
+        "desc": "Biết viết yêu cầu (prompt) rõ ràng cho Claude, rồi đọc lại, kiểm chứng và chỉnh sửa kết quả thay vì chép nguyên."
+      },
+      {
+        "title": "Hiểu cách một trang web được xây dựng",
+        "desc": "Biết trang web gồm những phần nào và cách triển khai (deploy) lên Vercel để có đường link công khai."
+      },
+      {
+        "title": "Sửa lỗi và cập nhật",
+        "desc": "Khi trang gặp lỗi hoặc cần thay đổi, biết mô tả vấn đề, thử lại và triển khai phiên bản mới."
+      },
+      {
+        "title": "Trình bày thông tin gọn gàng",
+        "desc": "Sắp xếp nội dung rõ ràng, dễ đọc và dễ di chuyển giữa các trang."
+      },
+      {
+        "title": "Làm việc nhóm và quản lý thời gian",
+        "desc": "Phối hợp với các bạn trong nhóm, chia việc và nộp bài đúng hạn."
+      }
+    ],
+    "highlight": "Khoảnh khắc trang web của mình xuất hiện trên Vercel với một đường link thật. Từ một ý tưởng trong đầu, mình có một sản phẩm có thể gửi cho thầy cô và bạn bè xem.",
+    "challenges": "Lần đầu làm quen với Vercel nên mình chưa hiểu cách deploy. Có lúc Claude cho kết quả chưa đúng ý, mình phải chỉnh lại yêu cầu nhiều lần. Giữ bố cục gọn khi số trang tăng lên cũng không dễ.\n\nCách mình vượt qua là đọc kỹ thông báo lỗi, chia vấn đề thành các bước nhỏ để hỏi lại Claude, thử đi thử lại và nhờ bạn bè góp ý.",
+    "closing": "Portfolio này ghi lại quá trình mình học cách làm việc cùng AI và công nghệ số. Mình hy vọng sau này, khi trở thành cô giáo dạy âm nhạc, mình sẽ biết dùng những công cụ như vậy để bài giảng sinh động và gần gũi hơn với học sinh."
   }
 };

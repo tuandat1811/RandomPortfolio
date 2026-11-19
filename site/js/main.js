@@ -669,28 +669,21 @@
           '<circle cx="268" cy="34" r="5" style="fill:var(--muted)"/>' +
         "</g>" +
       "</svg></div>";
-    var tracks = '<ol class="tracklist">' + EX.map(function (e) {
-      return '<li><a href="' + exUrl(e.number) + '">' +
-        '<span class="no">0' + e.number + "</span>" +
-        '<span class="t">' + esc(e.title) + "<small>" + esc(e.chapter) + "</small></span>" +
-        '<span class="play"><span class="play-icon" aria-hidden="true">▶</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></span>' +
-      "</a></li>";
-    }).join("") + "</ol>";
-    var chal = empty(C.challenges) ? "<p>" + ph("thách thức đã gặp") + "</p>" :
-      renderTable(["Thách thức", "Cách vượt qua"], C.challenges.map(function (c) { return [c.problem, c.solution]; }));
-    var tools = empty(C.aiTools) ? "<p>" + ph("bảng công cụ AI đã dùng") + "</p>" :
-      renderTable(["Công cụ AI", "Mục đích sử dụng", "Sử dụng ở đâu"], C.aiTools.map(function (a) { return [a.tool, a.purpose, a.where]; }));
+    var chal = Array.isArray(C.challenges)
+      ? (empty(C.challenges) ? "<p>" + ph("thách thức đã gặp") + "</p>" :
+          renderTable(["Thách thức", "Cách vượt qua"], C.challenges.map(function (c) { return [c.problem, c.solution]; })))
+      : paras(C.challenges, "thách thức đã gặp");
 
     document.getElementById("content").innerHTML =
       '<header class="page-head split"><div><span class="eyebrow">Tổng kết</span><h1>Nhìn lại hành trình</h1>' +
       '<p class="lead">Những trải nghiệm, kiến thức và kỹ năng có được sau khi hoàn thành học phần và xây dựng Portfolio.</p></div>' + vinyl + "</header>" +
-      '<section class="section"><h2>Trải nghiệm và cảm nhận</h2><div class="paper taped">' + paras(C.experience, "trải nghiệm và cảm nhận cá nhân") + "</div></section>" +
+      '<section class="section"><h2>Trải nghiệm và cảm nhận cá nhân</h2><div class="paper taped">' + paras(C.experience, "trải nghiệm và cảm nhận cá nhân") + "</div></section>" +
       '<section class="section"><h2>Kiến thức và kỹ năng quan trọng nhất</h2>' + learn + "</section>" +
-      '<section class="section"><h2>Điểm tâm đắc nhất</h2><div class="paper taped tape-right">' + paras(C.highlight, "điểm tâm đắc nhất") + "</div></section>" +
-      '<section class="section"><h2>Thách thức khi xây dựng Portfolio</h2>' + chal + "</section>" +
-      '<section class="section"><h2>Các bài tập đã hoàn thành</h2>' + tracks + "</section>" +
-      '<section class="section"><h2>Công cụ AI đã sử dụng</h2>' + tools + "</section>" +
-      (empty(C.closing) ? "" : '<section class="section"><div class="paper letter taped">' + paras(C.closing, "") +
+      '<section class="section"><h2>Điểm tâm đắc nhất và những thách thức</h2><div class="grid grid-2">' +
+        '<div class="paper taped"><h3>Điểm tâm đắc nhất</h3>' + paras(C.highlight, "điểm tâm đắc nhất") + "</div>" +
+        '<div class="paper taped tape-right"><h3>Thách thức đã gặp</h3>' + chal + "</div>" +
+      "</div></section>" +
+      (empty(C.closing) ? "" : '<section class="section"><h2>Lời kết</h2><div class="paper letter taped">' + paras(C.closing, "") +
         (P.name ? '<span class="sign">— ' + esc(P.name) + "</span>" : "") + "</div></section>");
   }
 

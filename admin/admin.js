@@ -373,9 +373,8 @@
         area(c, "experience", "Trải nghiệm và cảm nhận cá nhân", "Dòng trống để tách đoạn.", 7),
         pipes(c, "keyLearnings", ["title", "desc"], "Kiến thức và kỹ năng quan trọng nhất", "Dạng: Viết Prompt | Biết đặt vai trò, ngữ cảnh và định dạng đầu ra."),
         area(c, "highlight", "Điểm tâm đắc nhất", "", 4),
-        pipes(c, "challenges", ["problem", "solution"], "Thách thức khi xây dựng Portfolio", "Dạng: Thách thức | Cách vượt qua."),
-        pipes(c, "aiTools", ["tool", "purpose", "where"], "Bảng công cụ AI đã sử dụng", "Dạng: Tên công cụ | Mục đích | Dùng ở bài/phần nào."),
-        area(c, "closing", "Lời kết (không bắt buộc)", "", 3)
+        area(c, "challenges", "Thách thức đã gặp và cách vượt qua", "Dòng trống để tách đoạn.", 5),
+        area(c, "closing", "Lời kết", "", 3)
       ])
     ];
   }
