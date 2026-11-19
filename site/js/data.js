@@ -870,7 +870,8 @@ window.SITE_DATA = {
           "url": "https://youtu.be/etMX9FCxl9U",
           "caption": "Video bản ghi cuộc họp trên Zoom"
         }
-      ]
+      ],
+      "aiNote": "Không sử dụng công cụ AI nào."
     },
     {
       "number": 5,
