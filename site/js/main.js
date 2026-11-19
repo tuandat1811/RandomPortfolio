@@ -619,7 +619,7 @@
 
       '<section class="section"><h2><span class="num">c</span>Sản phẩm cuối cùng</h2>' +
         (e.blocks || []).map(renderBlock).join("") +
-        '<div class="media-block">' + renderMedia(e.media) + "</div>" +
+        (empty(e.media) && !empty(e.blocks) ? "" : '<div class="media-block">' + renderMedia(e.media) + "</div>") +
       "</section>" +
 
       '<nav class="ex-nav" aria-label="Điều hướng bài tập">' +

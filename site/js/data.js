@@ -673,7 +673,8 @@ window.SITE_DATA = {
           ]
         }
       ],
-      "media": []
+      "media": [],
+      "difficultiesNote": "Không có khó khăn nào."
     },
     {
       "number": 4,
