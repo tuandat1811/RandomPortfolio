@@ -231,7 +231,16 @@ window.SITE_DATA = {
         "Kết quả: 10 tài liệu gồm 5 bài báo khoa học quốc tế, 3 công trình nghiên cứu trong nước (luận văn, khóa luận), 1 giáo trình và 1 sách chuyên khảo.",
         "Chấm điểm từng tài liệu theo 5 tiêu chí (tác giả, cơ quan xuất bản, phương pháp, trích dẫn, cập nhật) và xếp hạng độ tin cậy."
       ],
-      "difficulties": [],
+      "difficulties": [
+        {
+          "problem": "Nhiều bài báo quốc tế chỉ cho xem tóm tắt, phải trả phí mới đọc được toàn văn.",
+          "solution": "Tìm bản truy cập mở (Frontiers in Psychology), dùng DOI để kiểm chứng thông tin xuất bản và đọc phần tóm tắt, trích dẫn trên các trang chỉ mục."
+        },
+        {
+          "problem": "Tài liệu trong nước (luận văn, khóa luận) nằm rải rác, ít được Google Scholar lập chỉ mục.",
+          "solution": "Dùng toán tử site: để tìm trực tiếp trên trang của các trường sư phạm và filetype:pdf để lọc ra luận văn, luận án."
+        }
+      ],
       "aiUsage": [],
       "blocks": [
         {
@@ -242,7 +251,23 @@ window.SITE_DATA = {
             "Truy vấn đã dùng",
             "Kết quả nhận được"
           ],
-          "rows": []
+          "rows": [
+            [
+              "\" \" (cụm từ chính xác)",
+              "\"hát hợp xướng\" \"học sinh\"",
+              "Chỉ hiện trang chứa đúng cụm từ, tìm được bài của Trần Thị Nhật Ánh (2025) về hát hợp xướng cho học sinh lớp 6."
+            ],
+            [
+              "site:",
+              "site:spnttw.edu.vn \"hợp xướng\"",
+              "Thu hẹp kết quả về trang của Trường ĐH Sư phạm Nghệ thuật Trung ương, tìm được các đề tài, luận văn của trường."
+            ],
+            [
+              "filetype:",
+              "filetype:pdf \"hát hợp xướng\" luận văn",
+              "Lọc ra các tệp PDF, tìm được luận án có tổng quan nhắc đến luận văn của Trần Tâm Đan (2011)."
+            ]
+          ]
         },
         {
           "type": "text",
@@ -465,7 +490,8 @@ window.SITE_DATA = {
           "src": "assets/uploads/bai2-10.png",
           "caption": "Nguyễn Bách (2010)"
         }
-      ]
+      ],
+      "aiNote": "Không sử dụng công cụ AI nào."
     },
     {
       "number": 3,
