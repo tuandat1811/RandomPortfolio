@@ -72,7 +72,7 @@ window.SITE_DATA = {
         {
           "type": "tree",
           "title": "Cấu trúc thư mục đã thiết lập",
-          "text": ""
+          "text": "💻 This PC\n└── 💽 New Volume (D:)\n    └── 📁 ThucHanh_TranThiKhanhLinh      (Bước 3: thư mục chính)\n        ├── 📁 TaiLieu                    (Bước 7: thư mục con)\n        │   └── 📄 GhiChuQuanTrong.txt    (Bước 8: bản sao · Bước 10–12: xoá rồi khôi phục)\n        └── 📄 GhiChuQuanTrong.txt        (Bước 5–6: tệp gốc, đổi tên)\n\nTệp tạm DiChuyen.txt: tạo trong thư mục chính → Cut & Paste vào TaiLieu (Bước 9)\n→ xoá vĩnh viễn bằng Shift + Delete (Bước 11), nên không còn trong cây."
         },
         {
           "type": "table",
